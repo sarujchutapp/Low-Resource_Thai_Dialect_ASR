@@ -1,3 +1,8 @@
+**⚠️ Compatibility Note:**
+These models were trained using custom modifications (e.g., InterCTC patches) that are not natively supported by standard ESPnet.
+
+If you encounter errors during loading or inference, please refer to the **`debug/`** directory for the necessary patch scripts and implementation details.
+
 ## 📂 Project Structure
 
 ### Core Scripts & Configs

@@ -1,10 +1,10 @@
 ## 📂 Project Structure
 
 ### Core Scripts & Configs
-**`train.py`**: Main training script using **ESPnet-EZ**. Handles model building, LoRA injection, and the training loop.
-**`benchmark.py`**: Evaluation script. Loads the trained model to calculate WER/CER on the test set.
-**`inference.py`**: Script for transcribing custom audio files.
-**`finetune_with_lora.yaml`**: Master configuration file defining model hyperparameters and training settings.
+* **`train.py`**: Main training script using **ESPnet-EZ**. Handles model building, LoRA injection, and the training loop.
+* **`benchmark.py`**: Evaluation script. Loads the trained model to calculate WER/CER on the test set.
+* **`inference.py`**: Script for transcribing custom audio files.
+* **`finetune_with_lora.yaml`**: Master configuration file defining model hyperparameters and training settings.
 
 ### Directories
 * **`debug/`**: Contains debug files.

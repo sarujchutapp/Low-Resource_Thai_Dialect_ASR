@@ -1,0 +1,91 @@
+# ---------------------- LoRA Finetuning (Safe for 4GB GPU) ----------------------
+
+use_lora: true
+use_adapter: true
+adapter: lora
+
+save_strategy: adapter_only
+save_lora_only: true
+
+adapter_conf:
+  target_modules: [
+    "fc1", "fc2",          # Encoder Feed-Forward
+    "w_1", "w_2",          # Decoder Feed-Forward
+    "q_proj", "v_proj",    # Encoder Attention (Optional but recommended)
+    "ctc_lo"               # CTC Classification Head
+  ]
+  r: 8
+  alpha: 16
+  dropout: 0.05
+
+# ---------------- DATA ----------------
+
+rir_scp: null
+noise_scp: null
+noise_apply_prob: 0.2
+rir_apply_prob: 0.1
+speech_volume_normalize: null
+non_linguistic_symbols: null
+
+preprocessor_conf:
+  speech_name: speech
+  text_name: text
+
+# ------------- IMPORTANT OOM FIXES --------------
+
+# Maximum input frames (VERY IMPORTANT!)
+max_len_in: 20000
+
+# Maximum output token length
+max_len_out: 500
+
+# Disable normalization layer that causes OOM
+normalize: null
+normalize_conf:
+  type: none
+
+# ------------- TRAINING ----------------
+
+seed: 2024
+ngpu: 1
+num_workers: 0          # Set to 0 to debug OOM and avoid multiprocessing overhead
+multiple_iterator: false
+
+# safer for GPU - CHANGED TO SORTED
+batch_type: sorted
+batch_size: 1           # Strictly 1 file at a time
+accum_grad: 4           # Simulate batch size of 4
+
+max_epoch: 60
+patience: 3
+
+best_model_criterion:
+  - [valid, acc, max]
+
+keep_nbest_models: 10
+use_amp: true
+
+# ----------------- OPTIMIZER -----------------
+
+optim: adam
+optim_conf:
+  lr: 0.001
+  weight_decay: 0.000001
+
+# ----------------- SCHEDULER -----------------
+
+scheduler: warmuplr
+scheduler_conf:
+  warmup_steps: 2000
+
+# ----------------- SpecAug -----------------
+
+specaug: specaug
+specaug_conf:
+  apply_time_warp: false
+  apply_freq_mask: true
+  freq_mask_width_range: [0, 20]
+  num_freq_mask: 1
+  apply_time_mask: true
+  time_mask_width_ratio_range: [0., 0.03]
+  num_time_mask: 3

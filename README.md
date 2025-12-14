@@ -30,3 +30,8 @@ For detailed experimental setup and comparative results against the official bas
 This project utilizes the **Thai Dialect Corpus**, specifically the **Korat** dialect subset.
 * **Source:** [SLSCU/thai-dialect-corpus](https://github.com/SLSCU/thai-dialect-corpus)
 * **License:** CC-BY-SA 4.0
+
+## 📥 Model Weights
+**⚠️ Note:** Due to GitHub's storage limitations, the trained model checkpoints (`.pth` files) are hosted externally.
+### 🔗 Download Links
+Please download the pre-trained weights from [this link](https://drive.google.com/drive/folders/1dBm3NYuHoIT_OtSZBYAu-Bn2lYN-1Bdf?usp=sharing).

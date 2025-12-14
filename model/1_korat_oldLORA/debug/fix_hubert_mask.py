@@ -2,7 +2,7 @@ import os
 
 # 1. Hardcoded path based on your error logs
 # This is the file causing the 13GB memory crash
-TARGET_FILE = "/mnt/c/users/Saruj/espnet/espnet2/asr/encoder/hubert_encoder.py"
+TARGET_FILE = "[path to ESPnet]/espnet/espnet2/asr/encoder/hubert_encoder.py"
 
 def fix_hubert_mask():
     if not os.path.exists(TARGET_FILE):

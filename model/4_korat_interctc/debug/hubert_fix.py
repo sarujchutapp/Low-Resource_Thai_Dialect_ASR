@@ -2,7 +2,7 @@ import os
 import re
 
 # Path to your specific file
-TARGET_FILE = "/mnt/c/users/Saruj/espnet/espnet2/asr/encoder/hubert_encoder.py"
+TARGET_FILE = "[path to ESPnet]/espnet/espnet2/asr/encoder/hubert_encoder.py"
 
 def patch_hubert_interctc():
     if not os.path.exists(TARGET_FILE):

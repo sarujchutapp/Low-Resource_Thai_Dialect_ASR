@@ -2,7 +2,7 @@ import os
 import re
 
 # The specific file causing the crash
-TARGET_FILE = "/mnt/c/users/Saruj/espnet/tools/miniconda/envs/espnet/lib/python3.11/site-packages/fairseq/models/transformer/transformer_config.py"
+TARGET_FILE = "[path to ESPnet]/espnet/tools/miniconda/envs/espnet/lib/python3.11/site-packages/fairseq/models/transformer/transformer_config.py"
 
 def fix_transformer_config():
     if not os.path.exists(TARGET_FILE):

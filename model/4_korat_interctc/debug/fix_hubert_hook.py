@@ -1,6 +1,6 @@
 import os
 
-TARGET_FILE = "/mnt/c/users/Saruj/espnet/espnet2/asr/encoder/hubert_encoder.py"
+TARGET_FILE = "[path to ESPnet]/espnet/espnet2/asr/encoder/hubert_encoder.py"
 
 # The content uses a Forward Hook to capture intermediate layers
 # regardless of FairSeq version argument compatibility.

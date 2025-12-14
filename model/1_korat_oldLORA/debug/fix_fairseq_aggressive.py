@@ -3,7 +3,7 @@ import re
 import sys
 
 # Hardcoded path from your traceback
-TARGET_DIR = "/mnt/c/users/Saruj/espnet/tools/miniconda/envs/espnet/lib/python3.11/site-packages/fairseq"
+TARGET_DIR = "[path to ESPnet]/espnet/tools/miniconda/envs/espnet/lib/python3.11/site-packages/fairseq"
 
 def fix_files():
     if not os.path.exists(TARGET_DIR):

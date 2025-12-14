@@ -1,6 +1,6 @@
 import os
 
-TARGET_FILE = "/mnt/c/users/Saruj/espnet/espnet2/asr/encoder/hubert_encoder.py"
+TARGET_FILE = "[path to ESPnet]/espnet/espnet2/asr/encoder/hubert_encoder.py"
 
 def fix_hubert_manual_forward():
     if not os.path.exists(TARGET_FILE):

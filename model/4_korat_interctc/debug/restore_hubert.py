@@ -1,6 +1,6 @@
 import os
 
-TARGET_FILE = "/mnt/c/users/Saruj/espnet/espnet2/asr/encoder/hubert_encoder.py"
+TARGET_FILE = "[path to ESPnet]/espnet/espnet2/asr/encoder/hubert_encoder.py"
 
 # The COMPLETE, CORRECTED content for hubert_encoder.py
 # This includes the Linear Memory Fix AND the Manual Forward Fix.

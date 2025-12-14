@@ -33,5 +33,11 @@ This project utilizes the **Thai Dialect Corpus**, specifically the **Korat** di
 
 ## 📥 Model Weights
 **⚠️ Note:** Due to GitHub's storage limitations, the trained model checkpoints (`.pth` files) are hosted externally.
+
 ### 🔗 Download Links
 Please download the pre-trained weights from [this link](https://drive.google.com/drive/folders/1dBm3NYuHoIT_OtSZBYAu-Bn2lYN-1Bdf?usp=sharing).
+
+## 🙏 Acknowledgements
+I would like to express my gratitude to my advisor, **Asst. Prof. Dr. Ekapol Chuangsuwanich**, for the guidance and support throughout this individual study.
+
+Finally, thank you to the **Chulalongkorn University** Computer Engineering Department for the resources provided for the *2110391 Individual Study* course.

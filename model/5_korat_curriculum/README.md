@@ -5,6 +5,8 @@
 * **`benchmark.py`**: Evaluation script. Loads the trained model to calculate WER/CER on the test set.
 * **`inference.py`**: Script for transcribing custom audio files.
 * **`finetune_with_lora.yaml`**: Master configuration file defining model hyperparameters and training settings.
+* **`smart_curriculum.py`**: A utility script that categorizes the dataset into training stages by calculating sentence frequency and Levenshtein distance metrics.
+* **`split_data.py`**: A preprocessing script that partitions the dataset into Phase 1 and Phase 2 subsets based on the defined curriculum strategy.
 
 ### Directories
 * **`dev_audio00/`**: **[Place Audio Files Here]** (See README inside folder for setup instructions).
